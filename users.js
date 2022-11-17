@@ -17,7 +17,7 @@ router.get("/:id", (req, res, next) => {
   console.log("id: " + req.params.id);
   let u = users.filter((u) => u.id == parseInt(req.params.id));
   console.log(u);
-  res.send("User: " + u[0].name);
+  res.render("pages/userDetail", { user: u[0] });
 });
 
 module.exports = router;
