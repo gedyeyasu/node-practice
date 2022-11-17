@@ -11,7 +11,7 @@ let users = [
   { name: "Aman", id: 3 },
 ];
 router.get("/", (req, res, next) => {
-  res.send(users);
+  res.render("pages/user", { users: users });
 });
 router.get("/:id", (req, res, next) => {
   console.log("id: " + req.params.id);

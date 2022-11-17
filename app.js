@@ -1,10 +1,11 @@
 const express = require("express");
 
 const app = express();
+const ejs = require("ejs");
 
 const userRouter = require("./users");
-
-app.listen(3000, () => {
+app.set("view engine", "ejs");
+app.listen(8000, () => {
   console.log("server is running on 3000");
 });
 
